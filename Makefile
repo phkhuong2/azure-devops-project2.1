@@ -1,5 +1,5 @@
 setup:
-	python3 -m venv ~/.udactity_project2
+	python3 -m venv ~/.azure-devops-project2.1
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
