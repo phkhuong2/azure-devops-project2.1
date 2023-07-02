@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-az webapp up -n azure-devops-project2
+az webapp up -n Azuredevops
