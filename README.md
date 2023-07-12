@@ -1,6 +1,6 @@
 # Overview
 
-Hello, I am Nghi, this is project 2 (CICD) in Nanodegree for DevOps Engineer using MS Azure from Udacity.
+Hello, I am Khuong, this is project 2 (CICD) in Nanodegree for DevOps Engineer using MS Azure from Udacity.
 
 This project consists of flask application that is developed to predict housing prices in Boston (the model is already created by the instructor). 
 
