@@ -97,7 +97,7 @@ To test the app running in Azure App Service, edit line 28 of the make_predict_a
 
 If it's working you should see the following output:
 
-![screenshot-prediction](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/06%20-%20make%20prediction.jpg?raw=true)
+![screenshot-prediction](https://github.com/phkhuong2/azure-devops-project2.1/blob/main/screenshots/06%20-%20make%20prediction.jpg)
 
 You can also visit the URL of the App Service via the browser and you should see the following page:
 
