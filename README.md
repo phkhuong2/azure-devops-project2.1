@@ -12,7 +12,7 @@ If anything changed in it repository,  it will trigger the Github Action and als
 
 ## Badge
 
-[![Python application test with Github Actions](https://github.com/Metan-CH4/azure-devops-project2.1/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/Metan-CH4/azure-devops-project2.1/actions/workflows/pythonapp.yml)
+[![Python application test with Github Actions](https://github.com/phkhuong2/azure-devops-project2.1/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/phkhuong2/azure-devops-project2.1/actions/workflows/pythonapp.yml)
 
 ## Project Plan
 
@@ -32,7 +32,7 @@ In Azure Cloud Shell, clone the repo:
 ```
 git clone git@github.com:Metan-CH4/azure-devops-project2.1.git
 ```
-![screenshot-gitClone-AzureCloud](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/00%20-%20Clone.jpg?raw=true)
+![screenshot-gitClone-AzureCloud](https://github.com/phkhuong2/azure-devops-project2.1/blob/main/screenshots/git_clone.png)
 
 
 Change into the new directory:
@@ -60,16 +60,16 @@ Install dependencies in the virtual environment and run tests:
 ```
 make all
 ```
-![make-all](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/02%20-%20Run%20make%20all%20from%20Local.png?raw=true)
+![make-all](https://github.com/phkhuong2/azure-devops-project2.1/blob/main/screenshots/run_make_all_local.png)
 
 Make change and test GitHub action
-![screenshot-test-githubaction](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/03%20-%20Test%20GitHub%20Action.png?raw=true)
+![screenshot-test-githubaction](https://github.com/phkhuong2/azure-devops-project2.1/blob/main/screenshots/test_github_action.png)
 
 ## Deploy the app to an Azure App Service
 
 Create an App Service in Azure. 
 
-Use this [file](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/commands.sh) to create new App Services
+Use this [file](https://github.com/phkhuong2/azure-devops-project2.1/blob/main/commands.sh) to create new App Services
 
 ```
 az webapp up -n azure-devops-project2
@@ -84,11 +84,11 @@ Next, create the pipeline in Azure DevOps. The basic steps are:
 
 Screenshot of the App Service:
 
-![My WebApp](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/04%20-%20Azure%20Web%20App.png?raw=true)
+![My WebApp](https://github.com/phkhuong2/azure-devops-project2.1/blob/main/screenshots/azure_web_app.png)
 
 Screenshot of Azure DevOps Project:
 
-![My_DevOps](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/05%20-%20My%20DevOps%20.png?raw=true)
+![My_DevOps](https://github.com/phkhuong2/azure-devops-project2.1/blob/main/screenshots/my_devops.png)
 
 To test the app running in Azure App Service, edit line 28 of the make_predict_azure_app.sh script with the DNS name of your app. Then run the script:
 ```
@@ -101,7 +101,7 @@ If it's working you should see the following output:
 
 You can also visit the URL of the App Service via the browser and you should see the following page:
 
-![screenshot-browser](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/07%20-%20Test.png?raw=true)
+![screenshot-browser](https://github.com/phkhuong2/azure-devops-project2.1/blob/main/screenshots/app.png)
 
 View the app logs:
 
@@ -109,7 +109,7 @@ To view the log in Cloud Shell
 ```
 az webapp log tail -g metal.ch4_rg_6319 -n azure-devops-project2
 ```
-![screenshot-log-webapp](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/08%20-%20Log.png?raw=true)
+![screenshot-log-webapp](https://github.com/phkhuong2/azure-devops-project2.1/blob/main/screenshots/log_trail.png)
 
 
 > 
@@ -129,9 +129,9 @@ locust -f locustfile.py --host https://azure-devops-project2.azurewebsites.net/ 
 ```
 Open a browser and go to [http://localhost:8089](http://localhost:8089) then click Start Swarming:
 
-![screenshot-loadtest#1](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/09%20-%20Load%20test%20%231.png?raw=true)
-![screenshot-loadtest#2](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/10%20-%20Load%20test%20%232.png?raw=true)
-![screenshot-loadtest#3](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/11%20-%20Load%20test%20%233.png?raw=true)
+![screenshot-loadtest#1](https://github.com/phkhuong2/azure-devops-project2.1/blob/main/screenshots/loadtest1.png)
+![screenshot-loadtest#2](https://github.com/phkhuong2/azure-devops-project2.1/blob/main/screenshots/loadtest2.png)
+![screenshot-loadtest#3](https://github.com/phkhuong2/azure-devops-project2.1/blob/main/screenshots/loadtest3.png)
 
 ## Future Enhancements
 - Creating a UI for making predictions.
