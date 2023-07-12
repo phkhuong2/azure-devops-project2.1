@@ -8,22 +8,23 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: 'e10f9afb-2c3d-4a86-8365-08fccd8b5df1'
+  azureServiceConnectionId: '27e8ccef-3336-4226-976e-50ebfdb811bf'
 
   # Web app name
-  webAppName: 'azure-devops-project2'
+  webAppName: 'azure-devops-project2-khuongph'
 
+  poolName: 'khuongPool'
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'khuongVM'
 
   # Environment name
-  environmentName: 'azure-devops-project2'
+  environmentName: 'khuongEnv'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
 
   # Python version: 3.7
-  pythonVersion: '3.7'
+  pythonVersion: '3.8.10'
 
 stages:
 - stage: Build
@@ -31,6 +32,7 @@ stages:
   jobs:
   - job: BuildJob
     pool:
+      name: $(poolName)
       vmImage: $(vmImageName)
     steps:
     - task: UsePythonVersion@0
@@ -67,6 +69,7 @@ stages:
   jobs:
   - deployment: DeploymentJob
     pool:
+      name: $(poolName)
       vmImage: $(vmImageName)
     environment: $(environmentName)
     strategy:
@@ -80,7 +83,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : azure-devops-project2'
+            displayName: 'Deploy Azure Web App : azure-devops-project2-khuongph'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
